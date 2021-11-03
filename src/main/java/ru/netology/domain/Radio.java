@@ -63,7 +63,7 @@ public class Radio {
             currentStation = currentStation - 1;
         }
         else {
-            currentStation = 9;
+            currentStation = countStation - 1;
         }
     }
 
