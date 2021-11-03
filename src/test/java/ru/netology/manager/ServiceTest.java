@@ -4,10 +4,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
 public class ServiceTest {
+    Radio radio = new Radio();
 
     @Test
     public void shouldSetCurrentAvgVolume() {
-        Radio radio = new Radio();
         radio.setCurrentVolume(5);
 
         int expected = 5;
@@ -17,7 +17,6 @@ public class ServiceTest {
 
     @Test
     public void shouldSetCurrentLessVolume() {
-        Radio radio = new Radio();
         radio.setCurrentVolume(-1);
 
         int expected = 0;
@@ -27,7 +26,6 @@ public class ServiceTest {
 
     @Test
     public void shouldSetCurrentMoreVolume() {
-        Radio radio = new Radio();
         radio.setCurrentVolume(11);
 
         int expected = 10;
@@ -37,7 +35,6 @@ public class ServiceTest {
 
     @Test
     public void shouldIncreaseVolume() {
-        Radio radio = new Radio();
         radio.setCurrentVolume(10);
         radio.increaseVolume();
 
@@ -48,7 +45,6 @@ public class ServiceTest {
 
     @Test
     public void shouldIncreaseAvgVolume() {
-        Radio radio = new Radio();
         radio.setCurrentVolume(6);
         radio.increaseVolume();
 
@@ -59,7 +55,6 @@ public class ServiceTest {
 
     @Test
     public void shouldIncreaseMaxVolume() {
-        Radio radio = new Radio();
         radio.setCurrentVolume(10);
         radio.increaseVolume();
 
@@ -70,7 +65,6 @@ public class ServiceTest {
 
     @Test
     public void shouldDecreaseAvgVolume() {
-        Radio radio = new Radio();
         radio.setCurrentVolume(4);
         radio.decreaseVolume();
 
@@ -81,7 +75,6 @@ public class ServiceTest {
 
     @Test
     public void shouldDecreaseMinVolume() {
-        Radio radio = new Radio();
         radio.setCurrentVolume(0);
         radio.decreaseVolume();
 
@@ -92,7 +85,6 @@ public class ServiceTest {
 
     @Test
     public void shouldSetCurrentAvgStation() {
-        Radio radio = new Radio();
         radio.setCurrentStation(7);
 
         int expected = 7;
@@ -102,7 +94,6 @@ public class ServiceTest {
 
     @Test
     public void shouldSetCurrentLessStation() {
-        Radio radio = new Radio();
         radio.setCurrentStation(-1);
 
         int expected = 9;
@@ -112,7 +103,6 @@ public class ServiceTest {
 
     @Test
     public void shouldSetCurrentMoreStation() {
-        Radio radio = new Radio();
         radio.setCurrentStation(10);
 
         int expected = 0;
@@ -122,7 +112,6 @@ public class ServiceTest {
 
     @Test
     public void shouldNextAvgStation() {
-        Radio radio = new Radio();
         radio.setCurrentStation(3);
         radio.nextStation();
 
@@ -133,7 +122,6 @@ public class ServiceTest {
 
     @Test
     public void shouldNextMoreStation() {
-        Radio radio = new Radio();
         radio.setCurrentStation(9);
         radio.nextStation();
 
@@ -144,7 +132,6 @@ public class ServiceTest {
 
     @Test
     public void shouldPrevAvgStation() {
-        Radio radio = new Radio();
         radio.setCurrentStation(7);
         radio.prevStation ();
 
@@ -155,7 +142,6 @@ public class ServiceTest {
 
     @Test
     public void shouldPrevLessStation() {
-        Radio radio = new Radio();
         radio.setCurrentStation(0);
         radio.prevStation ();
 
